@@ -1,0 +1,14 @@
+[Unit]
+Description=FitGirl RSS Telegram Notifier Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fitgirlrss
+Environment="TELEGRAM_BOT_TOKEN=your_bot_token_here"
+Environment="TELEGRAM_CHAT_ID=your_chat_id_here"
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target3
